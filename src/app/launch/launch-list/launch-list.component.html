@@ -1,0 +1,32 @@
+
+<div class="content-box">
+    <div class="flexside"></div>
+
+    <div class="flexcenter">
+
+        <div *ngIf='launchList.length == 0'>
+            No launch found.
+        </div>
+
+        <table *ngIf='launchList.length > 0' class="launch-table">
+            <tr *ngFor="let launch of launchList">
+
+                <div class="card-box"  (click)="clickLaunch(launch.rocket.rocket_id)">
+
+                    <div class="card-img"><img src="{{launch.links.mission_patch_small}}" alt="launch img" width="50" height="50"></div>
+                    <div class="card-content">
+                    <p class="mission-name">{{launch.mission_name}}</p>
+                    <span class="launch-date">{{launch.launch_date_utc |  launchDateFormat}} </span>
+                    </div>
+                    <div class="card-state" [class.highlightsuccess]="launch.launch_success"
+                    [class.highlightfailed]="!launch.launch_success">
+                        {{launch.launch_success ? "Successful" : "Failure"}}
+                    </div>
+                </div>
+                <hr>
+            </tr>
+        </table>
+    </div>
+
+    <div class="flexside"></div>
+</div>

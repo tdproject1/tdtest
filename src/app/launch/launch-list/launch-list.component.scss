@@ -1,0 +1,67 @@
+
+.content-box {
+	display: flex;
+    flex-flow: row wrap;
+}
+
+.flexside{
+    flex-basis: 25%;
+
+    @media (max-width: 900px) {
+        flex-basis: 5%;
+    }   
+}
+
+.flexcenter{
+    flex-basis: 50%;
+
+    @media (max-width: 900px) {
+        flex-basis: 90%;
+    } 
+}
+
+.launch-table{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+.card-box {
+    margin: 8px;
+    display: flex;
+    flex-flow: row nowrap;
+    cursor: pointer;
+}
+
+.card-img {
+    flex-basis: 80px;
+}
+
+.card-content{
+
+}
+
+.card-state{
+    margin-left: auto;
+}
+
+.mission-name{
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.launch-date{
+    color: lightgray;
+}
+
+.highlightsuccess {
+	color:green;
+    font-weight: bold;
+}
+
+.highlightfailed {
+	color:red;
+    font-weight: bold;
+}
+

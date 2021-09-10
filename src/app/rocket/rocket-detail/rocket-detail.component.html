@@ -1,0 +1,11 @@
+<div *ngIf="!rocket">
+    No rocket id found!
+</div>
+
+<div *ngIf="rocket">
+    <h2>Rocket Name: {{rocket.rocket_name}}</h2>
+    <div class="rocket-detail">
+        <p>Rocket type: {{rocket.rocket_type}}</p>
+        <p>Reused: {{getReused()}}</p>
+    </div>
+</div>

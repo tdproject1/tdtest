@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  spaceApiUrl: 'https://api.spacexdata.com/v3/launches/'
 };
